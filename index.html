@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TextGenTool - Alat Generator Teks</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-pencil-alt"></i> TextGenTool
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+          <i class="fas fa-bars navbar-toggler-icon"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+           <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/Tentang.html">Tentang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/Kontak.html">Kontak</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/FAQ.html">FAQ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container mb-20">
+        <h2>TextGenTool - Alat Generator Teks</h2>
+        <p>
+          Selamat datang di TextGenTool! Ciptakan teks menarik dengan mudah melalui menu dropdown. <br> Pilih format dan klik "Generate" untuk hasil cepat. Selamat mencoba!</p>
+      </div>
+      <a href="#generator" class="btn-mulai">Mulai</a>
+    </section>
+    <section id="generator" class="generator">
+      <div class="container">
+        <div class="form-group">
+          <div class="paste-btn-container">
+            <button id="paste-btn" class="btn">Paste Teks</button>
+          </div>
+          <div class="textarea-container">
+            <textarea id="text-input" placeholder="Paste / Ketikan teks di sini..."></textarea>
+          </div>
+        </div>
+        <div class="dropdown d-flex justify-content-left mb-3">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Format Teks
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#" id="lowercase">Lower Case</a>
+            <a class="dropdown-item" href="#" id="uppercase">Upper Case</a>
+            <a class="dropdown-item" href="#" id="sentencecase">Sentence Case</a>
+            <a class="dropdown-item" href="#" id="titlecase">Title Case</a>
+            <a class="dropdown-item" href="#" id="capitalizedcase">Capitalized Case</a>
+            <a class="dropdown-item" href="#" id="alternatingcase">Alternating Case</a>
+            <a class="dropdown-item" href="#" id="invertedcase">Inverted Case</a>
+            <a class="dropdown-item" href="#" id="camelcase">Camel Case</a>
+            <a class="dropdown-item" href="#" id="pascalcase">Pascal Case</a>
+            <a class="dropdown-item" href="#" id="snakecase">Snake Case</a>
+          </div>
+          <button id="generate-btn" class="btn ml-3">Generate</button>
+        </div>
+        
+                
+        <div class="textarea-container">
+          <textarea id="text-output" readonly></textarea>
+        </div>
+        <button id="copy-btn" class="btn d-flex justify-content-left">Copy Text</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+        <p class="footer-text">&copy; 2023 TextGenTool. All rights reserved.</p>
+    </div>
+</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHGCOrlJgeS0q3hoViR8yZ+3R+cknaflz5vtuUoAzttXbNlDJi6IMs4fX"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyZAFb7J3DUCupXqjWf3RGg8Gm7Ibbqz2X"
+  crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/3bb803bd5d.js" crossorigin="anonymous"></script>
+  <script src="javascript/script.js"></script>
+</body>
+
+</html>

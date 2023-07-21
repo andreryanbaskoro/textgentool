@@ -1,0 +1,257 @@
+/* Reset CSS (optional) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Additional styles for body */
+body {
+    font-family: "Roboto", Arial, sans-serif; /* Set font family to Roboto */
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #F8F8F8, white);
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: transparent; /* Change to transparent */
+    border: none; /* Remove border */
+    padding: 1rem;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+    position: relative; /* Add position relative to the navbar */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #000; /* Set text color to black */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link {
+    color: #000; /* Set link color to black */
+    position: relative; /* Add position relative to the nav-link */
+}
+
+/* Add the pseudo-element ::before for the animation effect */
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -3px; /* Adjust the position of the line based on your preference */
+    left: 50%; /* Position at the center */
+    transform: translateX(-50%); /* Center the line */
+    width: 0;
+    height: 2px; /* Adjust the height of the line based on your preference */
+    background-color: black;
+    transition: width 0.3s ease-out; /* Add the transition effect */
+}
+
+/* Add the hover effect to the nav-link */
+.navbar-nav .nav-link:hover::before {
+    width: 100%;
+}
+
+ /* Additional styles for FAQ */
+.accordion {
+  margin-top: 20px;
+}
+
+.card-header {
+  background-color: #f7f7f7;
+}
+
+.card-header h5 {
+  margin-bottom: 0;
+}
+
+.card-body {
+  background-color: #f7f7f7;
+  padding: 10px;
+}
+
+/* Styling untuk tanda panah pada tombol pertanyaan */
+.btn-link::after {
+  display: inline-block;
+  content: '\f107'; /* Unicode untuk tanda panah bawah */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-left: 5px;
+}
+
+/* Ganti tanda panah saat tombol pertanyaan dihover */
+.btn-link:hover::after {
+  content: '\f106'; /* Unicode untuk tanda panah ke kanan */
+}
+
+/* Ganti tanda panah saat tombol pertanyaan diaktifkan (diklik) */
+.btn-link:active::after {
+  content: '\f106'; /* Unicode untuk tanda panah ke kanan */
+}
+
+/* Remove blue border on focus */
+.btn-link:focus {
+  box-shadow: none;
+  outline: none; /* Hilangkan outline saat tombol mendapatkan focus */
+}
+
+  
+  /* Hilangkan garis bawah pada tombol pertanyaan saat diaktifkan (diklik) */
+  .btn-link.active {
+    text-decoration: none !important;
+  }
+  
+
+
+/* Hero section styles */
+.hero {
+    padding: 4rem 0;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Generator section styles */
+.generator {
+    margin: 5px;
+    margin-bottom: 50px; /* Add some margin to the bottom of the generator section */
+}
+
+textarea {
+    width: 100%;
+    min-height: 200px;
+    resize: vertical;
+}
+
+/* Footer styles */
+footer {
+    color: black;
+    padding: 10px; /* Increase the top and bottom padding to visually separate the footer */
+    margin-top: 30px; /* Add some top margin to push the footer down */
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.btn {
+    border: 1px solid black; /* Set border to black */
+    background-color: transparent; /* Transparent background */
+    color: black; /* Set text color to black */
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: black; /* Set background to white on hover */
+    color: white; /* Set text color to black on hover */
+}
+
+.btn-mulai {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px 20px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .btn-mulai:hover {
+    text-decoration: none; /* Hilangkan garis bawah pada hover */
+    color: white; /* Tetapkan warna teks pada hover */
+  }
+
+
+
+.paste-btn-container {
+    float: left;
+    margin-bottom: 10px; /* Atur margin kanan sesuai kebutuhan Anda */
+  }
+
+.dropdown-toggle {
+    border: 1px solid black;
+  }
+  
+
+  .dropdown-item.active {
+    background-color: white;
+    color: black;
+  }
+
+  .dropdown-menu {
+    background-color: white; /* Warna latar belakang hitam */
+    border-radius: 5px; /* Sudut lengkung menggunakan border radius */
+    color: black;
+  }
+  
+  /* CSS untuk teks pada menu dropdown saat tidak di-hover */
+  .dropdown-item {
+    color: black; /* Teks putih */
+  }
+  
+  /* CSS untuk teks pada menu dropdown saat di-hover */
+  .dropdown-item:hover {
+    background-color: black; /* Warna latar belakang putih saat di-hover */
+    color: white; /* Teks hitam saat di-hover */
+  }
+
+main {
+    text-align: center;
+}
+
+.hero, .generator, footer {
+    text-align: center;
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .hero h2 {
+        font-size: 2rem;
+    }
+    .generator textarea {
+        min-height: 150px;
+    }
+}
+
+@media (max-width: 575px) {
+    .navbar-nav .nav-item {
+        margin-right: 5px;
+    }
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+    .generator textarea {
+        min-height: 120px;
+    }
+}
+
+/* ... Additional Responsive Styles ... */
